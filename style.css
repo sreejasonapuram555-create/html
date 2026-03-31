@@ -1,0 +1,55 @@
+body {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+.track {
+    width: 600px;
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Runner style */
+.runner {
+    width: 50px;
+    height: 50px;
+    background: teal;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation: run 5s linear forwards;
+}
+
+/* Different speeds */
+.A { animation-duration: 2s; }
+.B { animation-duration: 3s; }
+.C { animation-duration: 4s; }
+.D { animation-duration: 5s; }
+.E { animation-duration: 6s; }
+
+/* Running animation */
+@keyframes run {
+    from { left: 0; }
+    to { left: 500px; }
+}
+
+/* Hover effect → reverse order */
+.track:hover {
+    display: flex;
+}
+
+/* Change order on hover */
+.track:hover .A { order: 5; }
+.track:hover .B { order: 4; }
+.track:hover .C { order: 3; }
+.track:hover .D { order: 2; }
+.track:hover .E { order: 1; }   
